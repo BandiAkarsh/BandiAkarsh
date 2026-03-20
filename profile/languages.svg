@@ -7,36 +7,36 @@
 </defs>
 <rect width="600" height="350" fill="url(#bg)" rx="10"/>
 <text x="20" y="35" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e0e0e0">Top Languages</text>
-<text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by lines of code</text>
-  <text x="20" y="97" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">SUM</text>
+<text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by bytes (GitHub Linguist)</text>
+  <text x="20" y="97" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">JavaScript</text>
   <rect x="120" y="80" width="390.0" height="24" fill="#FF6B6B" rx="4"/>
-  <text x="518.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">352.2K</text>
-  <text x="20" y="127" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">JavaScript</text>
-  <rect x="120" y="110" width="219.038911478091" height="24" fill="#4ECDC4" rx="4"/>
-  <text x="347.038911478091" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">197.8K</text>
-  <text x="20" y="157" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Markdown</text>
-  <rect x="120" y="140" width="53.078731572132746" height="24" fill="#45B7D1" rx="4"/>
-  <text x="181.07873157213274" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">47.9K</text>
-  <text x="20" y="187" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TypeScript</text>
-  <rect x="120" y="170" width="25.455244985575725" height="24" fill="#96CEB4" rx="4"/>
-  <text x="153.45524498557572" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">23.0K</text>
-  <text x="20" y="217" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">JSON</text>
-  <rect x="120" y="200" width="22.594893578356768" height="24" fill="#FFEAA7" rx="4"/>
-  <text x="150.59489357835676" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">20.4K</text>
-  <text x="20" y="247" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Python</text>
-  <rect x="120" y="230" width="13.940752561161212" height="24" fill="#DDA0DD" rx="4"/>
-  <text x="141.94075256116122" y="247" font-family="Arial,sans-serif" font-size="11" fill="#888">12.6K</text>
-  <text x="20" y="277" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">YAML</text>
-  <rect x="120" y="260" width="10.784731844717534" height="24" fill="#98D8C8" rx="4"/>
-  <text x="138.78473184471753" y="277" font-family="Arial,sans-serif" font-size="11" fill="#888">9.7K</text>
-  <text x="20" y="307" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Svelte</text>
-  <rect x="120" y="290" width="10.520069054812257" height="24" fill="#F7DC6F" rx="4"/>
-  <text x="138.52006905481227" y="307" font-family="Arial,sans-serif" font-size="11" fill="#888">9.5K</text>
-  <text x="20" y="337" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">CSV</text>
-  <rect x="120" y="320" width="10.338459441655498" height="24" fill="#BB8FCE" rx="4"/>
-  <text x="138.3384594416555" y="337" font-family="Arial,sans-serif" font-size="11" fill="#888">9.3K</text>
-  <text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Dart</text>
-  <rect x="120" y="350" width="7.427168752697454" height="24" fill="#85C1E9" rx="4"/>
-  <text x="135.42716875269747" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">6.7K</text>
-  <text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 689,178 lines</text>
+  <text x="518.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">6.9M (71.6%)</text>
+  <text x="20" y="127" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TypeScript</text>
+  <rect x="120" y="110" width="54.542473135429944" height="24" fill="#4ECDC4" rx="4"/>
+  <text x="182.54247313542993" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">960.1K (10.0%)</text>
+  <text x="20" y="157" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Python</text>
+  <rect x="120" y="140" width="48.42667199202245" height="24" fill="#45B7D1" rx="4"/>
+  <text x="176.42667199202245" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">852.5K (8.9%)</text>
+  <text x="20" y="187" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Svelte</text>
+  <rect x="120" y="170" width="17.11564251888746" height="24" fill="#96CEB4" rx="4"/>
+  <text x="145.11564251888746" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">301.3K (3.1%)</text>
+  <text x="20" y="217" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Makefile</text>
+  <rect x="120" y="200" width="12.249439898130722" height="24" fill="#FFEAA7" rx="4"/>
+  <text x="140.24943989813073" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">215.6K (2.2%)</text>
+  <text x="20" y="247" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Dart</text>
+  <rect x="120" y="230" width="11.097550583961095" height="24" fill="#DDA0DD" rx="4"/>
+  <text x="139.0975505839611" y="247" font-family="Arial,sans-serif" font-size="11" fill="#888">195.4K (2.0%)</text>
+  <text x="20" y="277" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Shell</text>
+  <rect x="120" y="260" width="4.301193441946703" height="24" fill="#98D8C8" rx="4"/>
+  <text x="132.3011934419467" y="277" font-family="Arial,sans-serif" font-size="11" fill="#888">75.7K (0.8%)</text>
+  <text x="20" y="307" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">CSS</text>
+  <rect x="120" y="290" width="3.4979896636242516" height="24" fill="#F7DC6F" rx="4"/>
+  <text x="131.49798966362425" y="307" font-family="Arial,sans-serif" font-size="11" fill="#888">61.6K (0.6%)</text>
+  <text x="20" y="337" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TeX</text>
+  <rect x="120" y="320" width="2.338204082025045" height="24" fill="#BB8FCE" rx="4"/>
+  <text x="130.33820408202504" y="337" font-family="Arial,sans-serif" font-size="11" fill="#888">41.2K (0.4%)</text>
+  <text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">HTML</text>
+  <rect x="120" y="350" width="1.4697850878093779" height="24" fill="#85C1E9" rx="4"/>
+  <text x="129.46978508780938" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">25.9K (0.3%)</text>
+  <text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 9,594,459 bytes</text>
 </svg>
