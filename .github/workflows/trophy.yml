@@ -20,55 +20,16 @@ jobs:
       - name: Generate Achievement Badges
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SCRIPT: aW1wb3J0IG9zLCBzeXMKc3RhcnMgPSBvcy5lbnZpcm9uLmdldCgnU1RBUlMnLCAnMCcpCnJlcG9zID0gb3MuZW52aXJvbi5nZXQoJ1JFUE9TJywgJzAnKQpzdmcgPSAnPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgODAwIDIwMCI+JwpzdmcgKz0gJzxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMWExYjI2IiByeD0iMTAiLz4nCnN2ZyArPSAnPHRleHQgeD0iNDAwIiB5PSIzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzdBQTJGNyIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj4mI3gxZjNjNjsgQWNoaWV2ZW1lbnRzPC90ZXh0PicKc3ZnICs9ICc8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MCwgNTApIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMjQyODNCIiByeD0iNSIvPjx0ZXh0IHg9IjcwIiB5PSIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzdBQTJGNyIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPlNUQVJTPC90ZXh0Pjx0ZXh0IHg9IjcwIiB5PSIzNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI0ZGRDcwMCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj4mI3gyYjUwOyBHaXRIdWI8L3RleHQ+PC9nPicKc3ZnICs9ICc8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTAsIDUwKSI+PHJlY3Qgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzI0MjgzQiIgcng9IjUiLz48dGV4dCB4PSI3MCIgeT0iMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3QUEyRjciIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5SRVBPUzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwMEQ5RkYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+JiN4MWY0ZTY7ICcgKyByZXBvcyArICc8L3RleHQ+PC9nPicKc3ZnICs9ICc8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNzAsIDUwKSI+PHJlY3Qgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzI0MjgzQiIgcng9IjUiLz48dGV4dCB4PSI3MCIgeT0iMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3QUEyRjciIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5GT0xMT1dFUlM8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjM0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjQkI5QUY3IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPiYjeDFmNDY1OyAnICsgc3RhcnMgKyAnPC90ZXh0PjwvZz4nCnN2ZyArPSAnPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTMwLCA1MCkiPjxyZWN0IHdpZHRoPSIxNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMyNDI4M0IiIHJ4PSI1Ii8+PHRleHQgeD0iNzAiIHk9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0FBMkY3IiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+QUNUSVZJVFk8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjM0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOUVDRTZBIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPiYjeDFmNTI1OyBBY3RpdmU8L3RleHQ+PC9nPicKc3ZnICs9ICc8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MCwgMTEwKSI+PHJlY3Qgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzI0MjgzQiIgcng9IjUiLz48dGV4dCB4PSI3MCIgeT0iMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3QUEyRjciIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5DT05UUklCVVRPUjwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGRjlFNjQiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+JiN4MWY0YmI7IFllczwvdGV4dD48L2c+JwpzdmcgKz0gJzxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMCwgMTEwKSI+PHJlY3Qgd2lkdGg9IjE0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzI0MjgzQiIgcng9IjUiLz48dGV4dCB4PSI3MCIgeT0iMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3QUEyRjciIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5QUk9KRUNUUzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNGNzc2OEUiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+JiN4MWY0Y2I7ICcgKyByZXBvcyArICc8L3RleHQ+PC9nPicKc3ZnICs9ICc8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNzAsIDExMCkiPjxyZWN0IHdpZHRoPSIxNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMyNDI4M0IiIHJ4PSI1Ii8+PHRleHQgeD0iNzAiIHk9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0FBMkY3IiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+QUNUSU9OUzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3RENGRkYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+JiN4MjY5OTsgQ0kvQ0Q8L3RleHQ+PC9nPicKc3ZnICs9ICc8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzAsIDExMCkiPjxyZWN0IHdpZHRoPSIxNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMyNDI4M0IiIHJ4PSI1Ii8+PHRleHQgeD0iNzAiIHk9IjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjN0FBMkY3IiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+UEFDS0FHRVM8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjM0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjQkI5QUY3IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPiYjeDFmNGU2OyBPcGVuPC90ZXh0PjwvZz4nCnN2ZyArPSAnPC9zdmc+Jwp3aXRoIG9wZW4oJ3Byb2ZpbGUvYWNoaWV2ZW1lbnRzLnN2ZycsICd3JykgYXMgZjoKICAgIGYud3JpdGUoc3ZnKQo=
         run: |
           mkdir -p profile
-
-          # Create a custom achievement badges SVG using shields.io
-          cat > profile/achievements.svg << 'EOF'
-          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 800 200">
-            <style>
-              .badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-            </style>
-            <rect width="800" height="200" fill="#1a1b26" rx="10"/>
-            
-            <!-- Title -->
-            <text x="400" y="30" text-anchor="middle" fill="#7AA2F7" font-size="18" font-weight="bold" class="badge">🏆 Achievements</text>
-            
-            <!-- Badges Row 1 -->
-            <a href="https://github.com/${{ github.repository_owner }}?tab=repositories">
-              <image href="https://img.shields.io/github/stars/${{ github.repository_owner }}?style=for-the-badge&color=FFD700&labelColor=1a1b26&logo=github" x="50" y="50" width="140" height="40"/>
-            </a>
-            
-            <a href="https://github.com/${{ github.repository_owner }}?tab=repositories">
-              <image href="https://img.shields.io/github/forks/${{ github.repository_owner }}?style=for-the-badge&color=00D9FF&labelColor=1a1b26&logo=github" x="210" y="50" width="140" height="40"/>
-            </a>
-            
-            <a href="https://github.com/${{ github.repository_owner }}?tab=packages">
-              <image href="https://img.shields.io/github/followers/${{ github.repository_owner }}?style=for-the-badge&color=BB9AF7&labelColor=1a1b26&logo=github" x="370" y="50" width="140" height="40"/>
-            </a>
-            
-            <a href="https://github.com/${{ github.repository_owner }}?tab=packages">
-              <image href="https://img.shields.io/github/downloads/${{ github.repository_owner }}/total?style=for-the-badge&color=9ECE6A&labelColor=1a1b26&logo=github" x="530" y="50" width="140" height="40"/>
-            </a>
-            
-            <!-- Badges Row 2 -->
-            <a href="https://github.com/${{ github.repository_owner }}/${{ github.repository_owner }}/graphs/commit-activity">
-              <image href="https://img.shields.io/github/commit-activity/w/${{ github.repository_owner }}?style=for-the-badge&color=FF9E64&labelColor=1a1b26&logo=github" x="50" y="110" width="140" height="40"/>
-            </a>
-            
-            <a href="https://github.com/${{ github.repository_owner }}/${{ github.repository_owner }}/graphs/contributors">
-              <image href="https://img.shields.io/github/last-commit/${{ github.repository_owner }}?style=for-the-badge&color=F7768E&labelColor=1a1b26&logo=github" x="210" y="110" width="140" height="40"/>
-            </a>
-            
-            <a href="https://github.com/${{ github.repository_owner }}?tab=projects">
-              <image href="https://img.shields.io/github/repo-size/${{ github.repository_owner }}?style=for-the-badge&color=7DCFFF&labelColor=1a1b26&logo=github" x="370" y="110" width="140" height="40"/>
-            </a>
-            
-            <a href="https://github.com/${{ github.repository_owner }}/${{ github.repository_owner }}/actions">
-              <image href="https://img.shields.io/github/actions/workflow/status/${{ github.repository_owner }}/${{ github.repository_owner }}/stats.yml?style=for-the-badge&color=BB9AF7&labelColor=1a1b26&logo=github" x="530" y="110" width="140" height="40"/>
-            </a>
-          </svg>
-          EOF
+          STARS=$(curl -s -H "Authorization: token $GH_TOKEN" "https://api.github.com/users/$USERNAME" | python3 -c "import sys,json; print(json.load(sys.stdin).get('followers', 0))" 2>/dev/null || echo "0")
+          REPOS=$(curl -s -H "Authorization: token $GH_TOKEN" "https://api.github.com/users/$USERNAME" | python3 -c "import sys,json; print(json.load(sys.stdin).get('public_repos', 0))" 2>/dev/null || echo "0")
+          export STARS REPOS
+          echo "$SCRIPT" | base64 -d > gen_achievements.py
+          python3 gen_achievements.py
+          rm gen_achievements.py
 
       - name: Commit & Push
         env:
