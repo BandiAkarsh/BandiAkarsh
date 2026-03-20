@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  actions: read
 
 jobs:
   languages:
@@ -24,17 +23,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          
-      - name: Debug - Check token
-        run: |
-          echo "Token available: ${#GITHUB_TOKEN}"
-          echo "User: $GITHUB_USER"
-          
-      - name: Debug - Test API
-        run: |
-          curl -s -I "https://api.github.com/users/$GITHUB_USER" \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json"
           
       - name: Run language stats generator
         run: python scripts/generate_languages.py
