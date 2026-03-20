@@ -26,11 +26,11 @@ jobs:
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate Top Langs Card
+      - name: Generate Top Langs Card (by number of repos, not bytes)
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: top-langs
-          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_border=true&theme=tokyonight&bg_color=1a1b26&title_color=7AA2F7&text_color=BB9AF7"
+          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_border=true&theme=tokyonight&bg_color=1a1b26&title_color=7AA2F7&text_color=BB9AF7&size_weight=0&count_weight=1"
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
