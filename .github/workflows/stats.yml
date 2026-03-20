@@ -20,27 +20,52 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Generate All Metrics (Lines of Code based)
-        uses: lowlighter/metrics@latest
-        with:
-          username: ${{ github.repository_owner }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          lines_code: true
-          lines_code_breakdown: true
-          repositories: false
-          topics: true
-          languages: true
-          languages_limit: 10
-          use_mocked_data: false
-          verified: false
-          output: metrics.svg
-          theme: tokyonight
-          base: ""
-          config_preset: ""
-          community_stats: false
-
-      - name: Move metrics to profile folder
-        run: mv metrics.svg profile/metrics.svg
+      - name: Generate Language Stats (Lines of Code)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p profile
+          
+          # Fetch language data from GitHub API (lines of code)
+          LANGUAGES=$(curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository_owner }}/${{ github.repository_owner }}/languages" | \
+            python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+total = sum(data.values())
+for lang, bytes in sorted(data.items(), key=lambda x: x[1], reverse=True)[:6]:
+    pct = (bytes / total * 100) if total > 0 else 0
+    print(f'{lang}:{pct:.1f}:{bytes}')
+")
+          
+          # Create SVG card
+          cat > profile/metrics.svg << 'SVGEOF'
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 400 200">
+  <style>
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; font-weight: bold; }
+    .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; }
+    .pct { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; }
+  </style>
+  <rect width="400" height="200" fill="#1a1b26" rx="10"/>
+  <text x="200" y="30" text-anchor="middle" fill="#7AA2F7" class="title">📊 Languages by Lines of Code</text>
+SVGEOF
+          
+          # Add language bars dynamically
+          Y=50
+          COLORS=("#FF6B6B" "#4ECDC4" "#45B7D1" "#96CEB4" "#FFEAA7" "#DDA0DD")
+          I=0
+          echo "$LANGUAGES" | while IFS=: read -r lang pct bytes; do
+            [ -z "$lang" ] && continue
+            COLOR=${COLORS[$I]}
+            BAR_WIDTH=$(echo "$pct * 3.2" | bc)
+            echo "  <rect x=\"20\" y=\"$Y\" width=\"$BAR_WIDTH\" height=\"20\" fill=\"$COLOR\" rx=\"3\"/>" >> profile/metrics.svg
+            echo "  <text x=\"25\" y=\"$((Y+14))\" fill=\"#1a1b26\" class=\"label\">$lang</text>" >> profile/metrics.svg
+            echo "  <text x=\"$((25 + ${BAR_WIDTH%.*}))\" y=\"$((Y+14))\" fill=\"#1a1b26\" class=\"pct\">${pct}%</text>" >> profile/metrics.svg
+            Y=$((Y+25))
+            I=$((I+1))
+          done
+          
+          echo "</svg>" >> profile/metrics.svg
 
       - name: Generate Stats Card (Total Stats)
         uses: soulteary/github-readme-stats-action@v1.0.0
@@ -102,7 +127,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Use HTTPS with token for push
           git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
