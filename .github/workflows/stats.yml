@@ -33,11 +33,14 @@ jobs:
           languages_limit: 10
           use_mocked_data: false
           verified: false
-          output: profile/metrics.svg
+          output: metrics.svg
           theme: tokyonight
           base: ""
           config_preset: ""
           community_stats: false
+
+      - name: Move metrics to profile folder
+        run: mv metrics.svg profile/metrics.svg
 
       - name: Generate Stats Card (Total Stats)
         uses: soulteary/github-readme-stats-action@v1.0.0

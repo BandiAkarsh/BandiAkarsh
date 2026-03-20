@@ -98,10 +98,6 @@ name: BandiAkarsh
 
 ---
 
-<p align="center">
-  <img src="dist/github-snake.svg" alt="Snake eating contributions"/>
-</p>
-
 <!---
 📌 All cards are auto-generated via GitHub Actions
 Card updates: Every 6 hours
