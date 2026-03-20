@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Generate 3D Calendar
         uses: yoshi389111/github-profile-3d-contrib@latest

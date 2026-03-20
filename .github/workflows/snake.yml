@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Generate Snake SVG
         uses: Platane/snk@v3
