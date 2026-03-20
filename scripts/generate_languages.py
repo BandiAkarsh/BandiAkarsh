@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Generate languages.svg showing top languages by lines of code across all repos.
-Uses GitHub API to get repos, clones them, and counts with cloc.
+Generate languages.svg using GitHub's own language data via API.
+This matches exactly what GitHub shows on each repo's language bar.
 """
 
 import subprocess
@@ -10,13 +10,12 @@ import urllib.error
 import json
 import os
 from collections import defaultdict
-import time
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_USER = os.environ.get("GITHUB_USER", "BandiAkarsh")
 OUTPUT_FILE = "profile/languages.svg"
 
-# Color palette for language bars (synthwave/cyberpunk theme)
+# Cyberpunk color palette
 COLORS = [
     "#FF6B6B",  # Red
     "#4ECDC4",  # Teal
@@ -31,138 +30,74 @@ COLORS = [
 ]
 
 
-def api_request(url, retries=3):
-    """Make API request with retry logic for rate limits."""
+def api_request(url):
+    """Make API request to GitHub."""
     headers = {
         "Accept": "application/vnd.github.v3+json",
         "Authorization": f"token {GITHUB_TOKEN}",
         "User-Agent": "GitHub-Languages-Stats"
     }
-    
-    for attempt in range(retries):
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=30) as response:
-                if response.status == 200:
-                    return json.loads(response.read().decode())
-                elif response.status == 403:
-                    print(f"Rate limited, waiting 60s... (attempt {attempt+1}/{retries})")
-                    time.sleep(60)
-                else:
-                    print(f"API returned status {response.status}")
-                    return None
-        except urllib.error.HTTPError as e:
-            if e.code == 403:
-                print(f"HTTP 403: Rate limit or permission issue. Waiting 60s...")
-                time.sleep(60)
-            else:
-                print(f"HTTP Error: {e}")
-                return None
-        except Exception as e:
-            print(f"Request error: {e}")
-            if attempt < retries - 1:
-                time.sleep(5)
-    return None
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return json.loads(response.read().decode())
+    except Exception as e:
+        print(f"API Error: {e}")
+        return None
 
 
-def get_repos():
-    """Fetch all repos for the user via GitHub API."""
-    repos = []
+def get_repo_languages():
+    """
+    Fetch language data from GitHub's API.
+    This uses GitHub's own Linguist analysis, matching what you see on repo pages.
+    """
+    all_languages = defaultdict(int)
     page = 1
     per_page = 100
     
-    print(f"Fetching repos for {GITHUB_USER}...")
+    print(f"Fetching language data from GitHub API for {GITHUB_USER}...")
     
     while True:
-        # Use /users/{username}/repos endpoint (works with PAT)
+        # Get user's repos
         url = f"https://api.github.com/users/{GITHUB_USER}/repos?per_page={per_page}&page={page}&type=all&sort=pushed"
-        data = api_request(url)
+        repos = api_request(url)
         
-        if data is None:
-            print("Failed to fetch repos, trying alternative endpoint...")
-            # Fallback to /user/repos
-            url = f"https://api.github.com/user/repos?per_page={per_page}&page={page}&sort=pushed"
-            data = api_request(url)
-            if data is None:
-                break
-        
-        if not data:
+        if repos is None:
             break
-            
-        for repo in data:
-            if repo.get("fork", False):
+        
+        if not repos:
+            break
+        
+        for repo in repos:
+            if repo.get("fork"):
                 continue
-            repos.append({
-                "name": repo["name"],
-                "clone_url": repo["clone_url"]
-            })
+            
+            repo_name = repo["name"]
+            print(f"  Fetching languages for {repo_name}...")
+            
+            # Get languages for this specific repo via GitHub API
+            # This returns bytes per language, exactly like the repo language bar
+            lang_url = f"https://api.github.com/repos/{GITHUB_USER}/{repo_name}/languages"
+            languages = api_request(lang_url)
+            
+            if languages:
+                for lang, bytes_count in languages.items():
+                    all_languages[lang] += bytes_count
+            else:
+                print(f"    Could not fetch languages for {repo_name}")
+            
+            # Be nice to the API
+            import time
+            time.sleep(0.5)
         
-        print(f"  Page {page}: found {len(data)} repos")
-        
-        if len(data) < per_page:
+        if len(repos) < per_page:
             break
         page += 1
         
-        # Safety limit
-        if page > 10:
+        if page > 10:  # Safety limit
             break
     
-    print(f"Total repos to analyze: {len(repos)}")
-    return repos
-
-
-def count_languages():
-    """Clone repos and count lines per language using cloc."""
-    language_counts = defaultdict(int)
-    repos = get_repos()
-    
-    if not repos:
-        print("No repos found!")
-        return language_counts
-    
-    for i, repo in enumerate(repos):
-        repo_name = repo["name"]
-        clone_url = repo["clone_url"]
-        print(f"[{i+1}/{len(repos)}] Processing {repo_name}...")
-        
-        # Use token for cloning
-        auth_url = clone_url.replace("https://", f"https://{GITHUB_TOKEN}@")
-        clone_dir = f"/tmp/repo_{i}"
-        
-        try:
-            # Clone repo
-            result = subprocess.run(
-                ["git", "clone", "--depth", "1", auth_url, clone_dir],
-                capture_output=True, text=True, timeout=120, check=False
-            )
-            
-            if result.returncode != 0:
-                print(f"  Clone failed: {result.stderr[:100] if result.stderr else 'unknown'}")
-                continue
-            
-            # Count with cloc
-            result = subprocess.run(
-                ["cloc", "--json", clone_dir],
-                capture_output=True, text=True, timeout=180
-            )
-            
-            if result.returncode == 0 and result.stdout:
-                try:
-                    data = json.loads(result.stdout)
-                    for lang, info in data.items():
-                        if isinstance(info, dict) and "code" in info:
-                            language_counts[lang] += info["code"]
-                except json.JSONDecodeError:
-                    pass
-                    
-        except subprocess.TimeoutExpired:
-            print(f"  Timeout processing {repo_name}")
-        except Exception as e:
-            print(f"  Error: {e}")
-        finally:
-            subprocess.run(["rm", "-rf", clone_dir], check=False)
-    
-    return language_counts
+    return all_languages
 
 
 def generate_svg(language_counts):
@@ -171,11 +106,12 @@ def generate_svg(language_counts):
         print("No language data found!")
         return False
     
+    # Sort by bytes (GitHub's method), take top 10
     sorted_langs = sorted(language_counts.items(), key=lambda x: x[1], reverse=True)[:10]
     total = sum(count for _, count in sorted_langs)
     
     if total == 0:
-        print("Total lines is 0!")
+        print("Total bytes is 0!")
         return False
     
     # SVG dimensions
@@ -196,29 +132,31 @@ def generate_svg(language_counts):
         '</defs>',
         f'<rect width="{width}" height="{height}" fill="url(#bg)" rx="10"/>',
         '<text x="20" y="35" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e0e0e0">Top Languages</text>',
-        '<text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by lines of code</text>',
+        '<text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by bytes (GitHub Linguist)</text>',
     ]
     
     y = 80
-    for idx, (lang, count) in enumerate(sorted_langs):
-        bar_width = (count / sorted_langs[0][1]) * bar_max_width
+    for idx, (lang, bytes_count) in enumerate(sorted_langs):
+        percentage = (bytes_count / total) * 100
+        bar_width = (bytes_count / sorted_langs[0][1]) * bar_max_width
         color = COLORS[idx % len(COLORS)]
         
-        if count >= 1000000:
-            count_str = f"{count/1000000:.1f}M"
-        elif count >= 1000:
-            count_str = f"{count/1000:.1f}K"
+        # Format bytes to human readable
+        if bytes_count >= 1000000:
+            count_str = f"{bytes_count/1000000:.1f}M"
+        elif bytes_count >= 1000:
+            count_str = f"{bytes_count/1000:.1f}K"
         else:
-            count_str = str(count)
+            count_str = str(bytes_count)
         
         svg_lines.extend([
             f'  <text x="20" y="{y+17}" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">{lang}</text>',
             f'  <rect x="{label_width}" y="{y}" width="{bar_width}" height="{bar_height}" fill="{color}" rx="4"/>',
-            f'  <text x="{label_width + bar_width + 8}" y="{y+17}" font-family="Arial,sans-serif" font-size="11" fill="#888">{count_str}</text>',
+            f'  <text x="{label_width + bar_width + 8}" y="{y+17}" font-family="Arial,sans-serif" font-size="11" fill="#888">{count_str} ({percentage:.1f}%)</text>',
         ])
         y += bar_height + bar_gap
     
-    svg_lines.append(f'  <text x="20" y="{y+20}" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: {total:,} lines</text>')
+    svg_lines.append(f'  <text x="20" y="{y+20}" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: {total:,} bytes</text>')
     svg_lines.append("</svg>")
     
     os.makedirs("profile", exist_ok=True)
@@ -227,6 +165,10 @@ def generate_svg(language_counts):
     
     print(f"\n✅ Generated {OUTPUT_FILE}")
     print(f"Top languages: {', '.join(l for l, _ in sorted_langs[:5])}")
+    print(f"Full breakdown:")
+    for lang, bytes_count in sorted_langs:
+        pct = (bytes_count / total) * 100
+        print(f"  {lang}: {bytes_count:,} bytes ({pct:.1f}%)")
     return True
 
 
@@ -252,9 +194,9 @@ def commit_changes():
 
 
 def main():
-    print(f"🚀 Generating language stats for {GITHUB_USER}...")
+    print(f"🚀 Generating language stats for {GITHUB_USER} (using GitHub API)...")
     
-    language_counts = count_languages()
+    language_counts = get_repo_languages()
     success = generate_svg(language_counts)
     
     if success:

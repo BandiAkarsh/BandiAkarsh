@@ -20,14 +20,8 @@ jobs:
         with:
           python-version: "3.11"
           
-      - name: Install dependencies
-        run: |
-          pip install requests
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq cloc git > /dev/null 2>&1
-          
       - name: Run language stats generator
+        run: python scripts/generate_languages.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
-        run: python scripts/generate_languages.py
