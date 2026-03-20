@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="200" viewBox="0 0 800 200">
+  <style>
+    .badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+  <rect width="800" height="200" fill="#1a1b26" rx="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="#7AA2F7" font-size="18" font-weight="bold" class="badge">🏆 Achievements</text>
+  
+  <!-- Badges Row 1 -->
+  <a href="https://github.com/BandiAkarsh?tab=repositories">
+    <image href="https://img.shields.io/github/stars/BandiAkarsh?style=for-the-badge&color=FFD700&labelColor=1a1b26&logo=github" x="50" y="50" width="140" height="40"/>
+  </a>
+  
+  <a href="https://github.com/BandiAkarsh?tab=repositories">
+    <image href="https://img.shields.io/github/forks/BandiAkarsh?style=for-the-badge&color=00D9FF&labelColor=1a1b26&logo=github" x="210" y="50" width="140" height="40"/>
+  </a>
+  
+  <a href="https://github.com/BandiAkarsh?tab=packages">
+    <image href="https://img.shields.io/github/followers/BandiAkarsh?style=for-the-badge&color=BB9AF7&labelColor=1a1b26&logo=github" x="370" y="50" width="140" height="40"/>
+  </a>
+  
+  <a href="https://github.com/BandiAkarsh?tab=packages">
+    <image href="https://img.shields.io/github/downloads/BandiAkarsh/total?style=for-the-badge&color=9ECE6A&labelColor=1a1b26&logo=github" x="530" y="50" width="140" height="40"/>
+  </a>
+  
+  <!-- Badges Row 2 -->
+  <a href="https://github.com/BandiAkarsh/BandiAkarsh/graphs/commit-activity">
+    <image href="https://img.shields.io/github/commit-activity/w/BandiAkarsh?style=for-the-badge&color=FF9E64&labelColor=1a1b26&logo=github" x="50" y="110" width="140" height="40"/>
+  </a>
+  
+  <a href="https://github.com/BandiAkarsh/BandiAkarsh/graphs/contributors">
+    <image href="https://img.shields.io/github/last-commit/BandiAkarsh?style=for-the-badge&color=F7768E&labelColor=1a1b26&logo=github" x="210" y="110" width="140" height="40"/>
+  </a>
+  
+  <a href="https://github.com/BandiAkarsh?tab=projects">
+    <image href="https://img.shields.io/github/repo-size/BandiAkarsh?style=for-the-badge&color=7DCFFF&labelColor=1a1b26&logo=github" x="370" y="110" width="140" height="40"/>
+  </a>
+  
+  <a href="https://github.com/BandiAkarsh/BandiAkarsh/actions">
+    <image href="https://img.shields.io/github/actions/workflow/status/BandiAkarsh/BandiAkarsh/stats.yml?style=for-the-badge&color=BB9AF7&labelColor=1a1b26&logo=github" x="530" y="110" width="140" height="40"/>
+  </a>
+</svg>
