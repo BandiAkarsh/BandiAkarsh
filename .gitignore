@@ -1,5 +1,5 @@
-profile/*.svg
-profile/pins/*.svg
-profile-3d-contrib/*.svg
-dist/*.svg
-!
+# Keep .gitignore itself tracked
+!.gitignore
+
+# Generated SVG files should be committed by workflows
+# (removed blocking rules for profile/, profile-3d-contrib/, dist/)

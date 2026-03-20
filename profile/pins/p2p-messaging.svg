@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+  <rect width="400" height="100" fill="#1a1b26" rx="10"/>
+  <text x="200" y="50" text-anchor="middle" fill="#7AA2F7" font-family="monospace" font-size="12">p2p-messaging</text>
+  <text x="200" y="70" text-anchor="middle" fill="#9AA5CE" font-family="monospace" font-size="10">Loading...</text>
+</svg>
