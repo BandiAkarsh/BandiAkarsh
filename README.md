@@ -15,7 +15,7 @@ name: BandiAkarsh
 ---
 
 <p align="center">
-  <img src="profile/top-langs.svg" alt="Top Languages" width="100%"/>
+  <img src="profile/metrics.svg" alt="Language Stats (Lines of Code)" width="100%"/>
 </p>
 
 ---
@@ -27,7 +27,7 @@ name: BandiAkarsh
 ---
 
 <p align="center">
-  <img src="profile/trophy.svg" alt="Trophies" width="100%"/>
+  <img src="profile/achievements.svg" alt="Achievements" width="100%"/>
 </p>
 
 ---

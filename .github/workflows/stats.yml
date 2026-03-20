@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 jobs:
   generate-stats:
@@ -18,7 +19,32 @@ jobs:
         with:
           ssh-key: ${{ secrets.SSH_KEY }}
 
-      - name: Generate Stats Card
+      - name: Generate All Metrics (Lines of Code based)
+        uses: lowlighter/metrics@latest
+        with:
+          username: ${{ github.repository_owner }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Lines of code metrics (not bytes!)
+          lines_code: true
+          lines_code_breakdown: true
+          # Other useful metrics
+          repositories: false
+          topics: true
+          languages: true
+          languages_limit: 10
+          # Base config
+          use_mocked_data: false
+          verified: false
+          # Output files
+          output: profile/metrics.svg
+          # Theme (Tokyo Night)
+          theme: tokyonight
+          base: ""
+          config_preset: ""
+          # Include community stats
+          community_stats: false
+
+      - name: Generate Stats Card (Total Stats)
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
@@ -26,15 +52,7 @@ jobs:
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate Top Langs Card (by number of repos, not bytes)
-        uses: soulteary/github-readme-stats-action@v1.0.0
-        with:
-          card: top-langs
-          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=10&hide_border=true&theme=tokyonight&bg_color=1a1b26&title_color=7AA2F7&text_color=BB9AF7&size_weight=0&count_weight=1"
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Phishing Detection Pin
+      - name: Generate Repo Pins
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
