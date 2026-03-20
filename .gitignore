@@ -1,0 +1,5 @@
+profile/*.svg
+profile/pins/*.svg
+profile-3d-contrib/*.svg
+dist/*.svg
+!

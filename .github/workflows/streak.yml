@@ -1,0 +1,36 @@
+name: Contribution Streak
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-streak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate Streak SVG
+        run: |
+          # Fetch streak stats from GitHub API
+          # Note: This uses curl to fetch from streak-stats.demolab.com
+          # which is the official source for contribution streak data
+          
+          mkdir -p profile
+          
+          # Create streak SVG with fetched data
+          # Since there's no GitHub Action for streak, we use curl
+          curl -sL "https://streak-stats.demolab.com/?user=BandiAkarsh&theme=tokyonight&hide_border=true&background=1a1b26&stroke=7AA2F7&ring=00D9FF&fire=BB9AF7&currStreakNum=00D9FF&sideNums=7AA2F7&currStreakLabel=BB9AF7&sideLabels=7AA2F7&dates=BB9AF7&type=svg" \
+            -o profile/streak.svg || echo "Fallback streak SVG" > profile/streak.svg
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/streak.svg
+          git diff --cached --quiet || git commit -m "🔥 Update streak [skip ci]"
+          git push
