@@ -14,19 +14,10 @@ name: BandiAkarsh
 
 ---
 
-## 🛠️ Languages I Use
+## 📊 Language Stats
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/BandiAkarsh?label=⭐%20Stars&style=for-the-badge&color=FFD700" alt="GitHub Stars"/>
-  <img src="https://img.shields.io/github/forks/BandiAkarsh?label=🍴%20Forks&style=for-the-badge&color=00D9FF" alt="GitHub Forks"/>
-  <img src="https://img.shields.io/github/followers/BandiAkarsh?label=👥%20Followers&style=for-the-badge&color=BB9AF7" alt="GitHub Followers"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=TypeScript&message=4%20repos&style=for-the-badge&color=3178C6&logo=typescript" alt="TypeScript"/>
-  <img src="https://img.shields.io/static/v1?label=Python&message=1%20repo&style=for-the-badge&color=3572A5&logo=python" alt="Python"/>
-  <img src="https://img.shields.io/static/v1?label=Shell&message=1%20repo&style=for-the-badge&color=89E051&logo=bash" alt="Shell"/>
-  <img src="https://img.shields.io/static/v1?label=JavaScript&message=1%20repo&style=for-the-badge&color=F7DF1E&logo=javascript" alt="JavaScript"/>
+  <img src="profile/languages.svg" alt="Languages by Lines of Code" width="100%"/>
 </p>
 
 ---
