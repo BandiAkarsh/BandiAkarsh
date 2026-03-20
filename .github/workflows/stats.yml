@@ -36,7 +36,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
-          options: "username=BandiAkarsh&repo=Multimodal_LLM-Phishing-Detection&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
+          options: "username=${{ github.repository_owner }}&repo=Multimodal_LLM-Phishing-Detection&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
           path: profile/pins/phishing-detection.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -44,7 +44,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
-          options: "username=BandiAkarsh&repo=opencode-antigravity-auth&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
+          options: "username=${{ github.repository_owner }}&repo=opencode-antigravity-auth&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
           path: profile/pins/opencode-antigravity.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -52,7 +52,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
-          options: "username=BandiAkarsh&repo=Terrafork&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
+          options: "username=${{ github.repository_owner }}&repo=Terrafork&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
           path: profile/pins/terrafork.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -60,7 +60,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
-          options: "username=BandiAkarsh&repo=shannon&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
+          options: "username=${{ github.repository_owner }}&repo=shannon&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
           path: profile/pins/shannon.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -68,7 +68,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
-          options: "username=BandiAkarsh&repo=Locanote&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
+          options: "username=${{ github.repository_owner }}&repo=Locanote&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
           path: profile/pins/locanote.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -76,7 +76,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: pin
-          options: "username=BandiAkarsh&repo=p2p-messeging-app&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
+          options: "username=${{ github.repository_owner }}&repo=p2p-messeging-app&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7AA2F7&icon_color=00D9FF"
           path: profile/pins/p2p-messaging.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 

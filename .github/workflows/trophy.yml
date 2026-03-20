@@ -17,7 +17,7 @@ jobs:
       - name: Generate Trophy SVG
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         with:
-          username: BandiAkarsh
+          username: ${{ github.repository_owner }}
           output_path: profile/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           theme: tokyonight
