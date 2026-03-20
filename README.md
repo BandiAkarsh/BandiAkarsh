@@ -14,8 +14,19 @@ name: BandiAkarsh
 
 ---
 
+## 🛠️ Languages I Use
+
 <p align="center">
-  <img src="profile/metrics.svg" alt="Language Stats (Lines of Code)" width="100%"/>
+  <img src="https://img.shields.io/github/stars/BandiAkarsh?label=⭐%20Stars&style=for-the-badge&color=FFD700" alt="GitHub Stars"/>
+  <img src="https://img.shields.io/github/forks/BandiAkarsh?label=🍴%20Forks&style=for-the-badge&color=00D9FF" alt="GitHub Forks"/>
+  <img src="https://img.shields.io/github/followers/BandiAkarsh?label=👥%20Followers&style=for-the-badge&color=BB9AF7" alt="GitHub Followers"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=TypeScript&message=4%20repos&style=for-the-badge&color=3178C6&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/static/v1?label=Python&message=1%20repo&style=for-the-badge&color=3572A5&logo=python" alt="Python"/>
+  <img src="https://img.shields.io/static/v1?label=Shell&message=1%20repo&style=for-the-badge&color=89E051&logo=bash" alt="Shell"/>
+  <img src="https://img.shields.io/static/v1?label=JavaScript&message=1%20repo&style=for-the-badge&color=F7DF1E&logo=javascript" alt="JavaScript"/>
 </p>
 
 ---
@@ -26,8 +37,13 @@ name: BandiAkarsh
 
 ---
 
+## 🏆 Achievements
+
 <p align="center">
-  <img src="profile/achievements.svg" alt="Achievements" width="100%"/>
+  <img src="https://img.shields.io/badge/📊-Contributor-FF9E64?style=for-the-badge" alt="Contributor"/>
+  <img src="https://img.shields.io/badge/⚙️-CICD-7DCFFF?style=for-the-badge" alt="CI/CD"/>
+  <img src="https://img.shields.io/badge/🔥-Active-9ECE6A?style=for-the-badge" alt="Active"/>
+  <img src="https://img.shields.io/badge/📦-Open%20Source-BB9AF7?style=for-the-badge" alt="Open Source"/>
 </p>
 
 ---
@@ -102,4 +118,4 @@ name: BandiAkarsh
 📌 All cards are auto-generated via GitHub Actions
 Card updates: Every 6 hours
 Generated with ❤️ by GitHub Actions
---->
+-->
