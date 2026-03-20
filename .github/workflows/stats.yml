@@ -17,31 +17,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ssh-key: ${{ secrets.SSH_KEY }}
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Generate All Metrics (Lines of Code based)
         uses: lowlighter/metrics@latest
         with:
           username: ${{ github.repository_owner }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Lines of code metrics (not bytes!)
           lines_code: true
           lines_code_breakdown: true
-          # Other useful metrics
           repositories: false
           topics: true
           languages: true
           languages_limit: 10
-          # Base config
           use_mocked_data: false
           verified: false
-          # Output files
           output: profile/metrics.svg
-          # Theme (Tokyo Night)
           theme: tokyonight
           base: ""
           config_preset: ""
-          # Include community stats
           community_stats: false
 
       - name: Generate Stats Card (Total Stats)
@@ -101,11 +96,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit & Push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Switch remote to SSH for push
-          git remote set-url origin git@github.com:${{ github.repository_owner }}/${{ github.repository_owner }}.git
+          # Use HTTPS with token for push
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add profile/*.svg profile/pins/*.svg
           git diff --cached --quiet || git commit -m "📊 Update stats cards [skip ci]"
-          git push
+          git push origin main

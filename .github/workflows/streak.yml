@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ssh-key: ${{ secrets.SSH_KEY }}
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: Generate Streak SVG
         run: |
@@ -23,11 +24,12 @@ jobs:
             -o profile/streak.svg || echo "Fallback" > profile/streak.svg
 
       - name: Commit & Push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Switch remote to SSH for push
-          git remote set-url origin git@github.com:${{ github.repository_owner }}/${{ github.repository_owner }}.git
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add profile/streak.svg
           git diff --cached --quiet || git commit -m "🔥 Update streak [skip ci]"
-          git push
+          git push origin main
