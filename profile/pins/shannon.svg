@@ -1,5 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
-  <rect width="400" height="100" fill="#1a1b26" rx="10"/>
-  <text x="200" y="50" text-anchor="middle" fill="#7AA2F7" font-family="monospace" font-size="12">shannon</text>
-  <text x="200" y="70" text-anchor="middle" fill="#9AA5CE" font-family="monospace" font-size="10">Loading...</text>
-</svg>
+
+      <svg
+        width="400"
+        height="150"
+        viewBox="0 0 400 150"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-labelledby="descId"
+      >
+        <title id="titleId"></title>
+        <desc id="descId"></desc>
+        <style>
+          .header {
+            font: 600 18px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
+            fill: #7AA2F7;
+            animation: fadeInAnimation 0.8s ease-in-out forwards;
+          }
+          @supports(-moz-appearance: auto) {
+            /* Selector detects Firefox */
+            .header { font-size: 15.5px; }
+          }
+          
+    .header {
+      font: 600 18px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #7AA2F7;
+      animation: fadeInAnimation 0.8s ease-in-out forwards;
+    }
+    @supports(-moz-appearance: auto) {
+      /* Selector detects Firefox */
+      .header { font-size: 15.5px; }
+    }
+    .description { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; }
+    .gray { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; }
+    .icon {
+      fill: #00D9FF;
+      display: block;
+    }
+  
+
+          
+      /* Animations */
+      @keyframes scaleInAnimation {
+        from {
+          transform: translate(-5px, 5px) scale(0);
+        }
+        to {
+          transform: translate(-5px, 5px) scale(1);
+        }
+      }
+      @keyframes fadeInAnimation {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideInAnimation {
+        from {
+          transform: translateX(-10px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bounceInAnimation {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    
+          
+        </style>
+
+        
+
+        <rect
+          data-testid="card-bg"
+          x="0.5"
+          y="0.5"
+          rx="4.5"
+          height="99%"
+          stroke="#e4e2e2"
+          width="399"
+          fill="#1a1b26"
+          stroke-opacity="0.0"
+        />
+
+        
+      <g
+        data-testid="card-title"
+        transform="translate(25, 35)"
+      >
+        <g transform="translate(0, 0)">
+      <text
+        x="0"
+        y="0"
+        class="header"
+        data-testid="header"
+      >shannon</text>
+    </g>
+      </g>
+    
+
+        <g
+          data-testid="main-card-body"
+          transform="translate(0, 55)"
+        >
+          
+      <g class="description" data-testid="description">
+        <text
+          class="gray"
+          x="25"
+          y="15"
+          data-testid="description-text"
+        >
+          <tspan>Fully autonomous AI hacker to find actual exploits in</tspan><tspan dy="1.5em" x="25">your web apps. Shannon has achieved a 96.15%</tspan><tspan dy="1.5em" x="25">success rate on the hint-free, source-aware XBOW</tspan>
+        </text>
+      </g>
+      <g data-testid="metadata" style="display: block">
+        <g transform="translate(211, 75)">
+          <g transform="translate(0, 0)">
+    <g data-testid="primary-lang">
+      <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#3178c6" />
+      <text data-testid="lang-name" class="gray" x="15">TypeScript</text>
+    </g>
+    </g>
+        </g>
+      </g>
+      
+  
+        </g>
+      </svg>
+    
