@@ -5,35 +5,35 @@
 <rect width="600" height="350" fill="url(#bg)" rx="10"/>
 <text x="20" y="35" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e0e0e0">Top Languages</text>
 <text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by bytes (GitHub Linguist)</text>
-<text x="20" y="97" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TypeScript</text>
+<text x="20" y="97" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Python</text>
 <rect x="120" y="80" width="380.0" height="24" fill="#FF6B6B" rx="4"/>
-<text x="508.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">946.0K (39.4%)</text>
-<text x="20" y="127" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Python</text>
-<rect x="120" y="110" width="342.58388864458954" height="24" fill="#4ECDC4" rx="4"/>
-<text x="470.58388864458954" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">852.9K (35.5%)</text>
+<text x="508.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">1.0M (39.0%)</text>
+<text x="20" y="127" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TypeScript</text>
+<rect x="120" y="110" width="351.869512531738" height="24" fill="#4ECDC4" rx="4"/>
+<text x="479.869512531738" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">946.0K (36.1%)</text>
 <text x="20" y="157" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Svelte</text>
-<rect x="120" y="140" width="121.02393617021278" height="24" fill="#45B7D1" rx="4"/>
-<text x="249.02393617021278" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">301.3K (12.6%)</text>
+<rect x="120" y="140" width="112.0648248023288" height="24" fill="#45B7D1" rx="4"/>
+<text x="240.06482480232881" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">301.3K (11.5%)</text>
 <text x="20" y="187" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">JavaScript</text>
-<rect x="120" y="170" width="36.76819419544701" height="24" fill="#96CEB4" rx="4"/>
-<text x="164.768194195447" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">91.5K (3.8%)</text>
+<rect x="120" y="170" width="34.04633307427426" height="24" fill="#96CEB4" rx="4"/>
+<text x="162.04633307427426" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">91.5K (3.5%)</text>
 <text x="20" y="217" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Shell</text>
-<rect x="120" y="200" width="25.033783783783782" height="24" fill="#FFEAA7" rx="4"/>
-<text x="153.03378378378378" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">62.3K (2.6%)</text>
+<rect x="120" y="200" width="33.553500919105055" height="24" fill="#FFEAA7" rx="4"/>
+<text x="161.55350091910506" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">90.2K (3.4%)</text>
 <text x="20" y="247" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">CSS</text>
-<rect x="120" y="230" width="24.734127118357407" height="24" fill="#DDA0DD" rx="4"/>
-<text x="152.7341271183574" y="247" font-family="Arial,sans-serif" font-size="11" fill="#888">61.6K (2.6%)</text>
+<rect x="120" y="230" width="22.903119084301217" height="24" fill="#DDA0DD" rx="4"/>
+<text x="150.9031190843012" y="247" font-family="Arial,sans-serif" font-size="11" fill="#888">61.6K (2.4%)</text>
 <text x="20" y="277" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TeX</text>
-<rect x="120" y="260" width="16.533335588404427" height="24" fill="#98D8C8" rx="4"/>
-<text x="144.53333558840444" y="277" font-family="Arial,sans-serif" font-size="11" fill="#888">41.2K (1.7%)</text>
-<text x="20" y="307" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">HTML</text>
-<rect x="120" y="290" width="8.792071170043636" height="24" fill="#F7DC6F" rx="4"/>
-<text x="136.79207117004364" y="307" font-family="Arial,sans-serif" font-size="11" fill="#888">21.9K (0.9%)</text>
-<text x="20" y="337" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Dockerfile</text>
-<rect x="120" y="320" width="5.549271893921456" height="24" fill="#BB8FCE" rx="4"/>
-<text x="133.54927189392146" y="337" font-family="Arial,sans-serif" font-size="11" fill="#888">13.8K (0.6%)</text>
-<text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Rust</text>
-<rect x="120" y="350" width="3.0636479721273213" height="24" fill="#85C1E9" rx="4"/>
-<text x="131.06364797212734" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">7.6K (0.3%)</text>
-<text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 2,400,098 bytes</text>
+<rect x="120" y="260" width="15.309412457935528" height="24" fill="#98D8C8" rx="4"/>
+<text x="143.30941245793554" y="277" font-family="Arial,sans-serif" font-size="11" fill="#888">41.2K (1.6%)</text>
+<text x="20" y="307" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Rust</text>
+<rect x="120" y="290" width="10.930087329662134" height="24" fill="#F7DC6F" rx="4"/>
+<text x="138.93008732966214" y="307" font-family="Arial,sans-serif" font-size="11" fill="#888">29.4K (1.1%)</text>
+<text x="20" y="337" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">HTML</text>
+<rect x="120" y="320" width="8.14121525459895" height="24" fill="#BB8FCE" rx="4"/>
+<text x="136.14121525459896" y="337" font-family="Arial,sans-serif" font-size="11" fill="#888">21.9K (0.8%)</text>
+<text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Dockerfile</text>
+<rect x="120" y="350" width="5.13847262163215" height="24" fill="#85C1E9" rx="4"/>
+<text x="133.13847262163216" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">13.8K (0.5%)</text>
+<text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 2,618,523 bytes</text>
 </svg>
