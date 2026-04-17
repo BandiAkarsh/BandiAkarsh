@@ -7,7 +7,7 @@
 <text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by bytes (GitHub Linguist)</text>
 <text x="20" y="97" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Python</text>
 <rect x="120" y="80" width="380.0" height="24" fill="#FF6B6B" rx="4"/>
-<text x="508.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">1.2M (41.9%)</text>
+<text x="508.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">1.2M (41.8%)</text>
 <text x="20" y="127" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TypeScript</text>
 <rect x="120" y="110" width="301.55015363296025" height="24" fill="#4ECDC4" rx="4"/>
 <text x="429.55015363296025" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">946.0K (33.2%)</text>
@@ -15,8 +15,8 @@
 <rect x="120" y="140" width="96.03891196156114" height="24" fill="#45B7D1" rx="4"/>
 <text x="224.03891196156115" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">301.3K (10.6%)</text>
 <text x="20" y="187" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Shell</text>
-<rect x="120" y="170" width="39.55372204471504" height="24" fill="#96CEB4" rx="4"/>
-<text x="167.55372204471504" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">124.1K (4.4%)</text>
+<rect x="120" y="170" width="40.344241846715995" height="24" fill="#96CEB4" rx="4"/>
+<text x="168.344241846716" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">126.6K (4.4%)</text>
 <text x="20" y="217" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">JavaScript</text>
 <rect x="120" y="200" width="30.02955222052684" height="24" fill="#FFEAA7" rx="4"/>
 <text x="158.02955222052685" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">94.2K (3.3%)</text>
@@ -35,5 +35,5 @@
 <text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Dockerfile</text>
 <rect x="120" y="350" width="4.403641558323903" height="24" fill="#85C1E9" rx="4"/>
 <text x="132.4036415583239" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">13.8K (0.5%)</text>
-<text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 2,847,313 bytes</text>
+<text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 2,849,793 bytes</text>
 </svg>
