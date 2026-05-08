@@ -59,7 +59,7 @@ Fun fact: I build tools to detect phishing sites!
 
 <p align="center">
   <a href="https://github.com/BandiAkarsh/Phishing-Guard">
-    <img src="profile/pins/phishing-detection.svg" alt="Phishing Detection" width="49%"/>
+    <img src="profile/pins/phishing-guard.svg" alt="Phishing Guard" width="49%"/>
   </a>
   <a href="https://github.com/BandiAkarsh/wayland-native-fm">
     <img src="profile/pins/wayland-native.svg" alt="wayland-native-fm" width="49%"/>
@@ -99,7 +99,8 @@ Fun fact: I build tools to detect phishing sites!
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="https://github.com/BandiAkarsh">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-181717">
+    
   </a>
 </p>
 
