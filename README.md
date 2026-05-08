@@ -1,11 +1,11 @@
 <!---
 name: BandiAkarsh
-👋 Hi, I'm Akarsh Bandi - Security Researcher & AI Developer
-🔭 Currently working on AI-powered security tools
-🌱 Learning more about LLM security and edge computing
-💬 Ask me about Python, AI, Cybersecurity
-📫 Reach me: akarshbandi82@gmail.com
-⚡ Fun fact: I build tools to detect phishing sites!
+Hi, I'm Akarsh Bandi - Security Researcher & AI Developer
+Currently working on AI-powered security tools
+Learning more about LLM security and edge computing
+Ask me about Python, AI, Cybersecurity
+Reach me: akarshbandi82@gmail.com
+Fun fact: I build tools to detect phishing sites!
 --->
 
 <p align="center">
@@ -14,7 +14,7 @@ name: BandiAkarsh
 
 ---
 
-## 📊 Language Stats
+## Language Stats
 
 <p align="center">
   <img src="profile/languages.svg" alt="Languages by Lines of Code" width="100%"/>
@@ -28,13 +28,13 @@ name: BandiAkarsh
 
 ---
 
-## 🏆 Achievements
+## Achievements
 
 <p align="center">
-  <img src="https://img.shields.io/badge/📊-Contributor-FF9E64?style=for-the-badge" alt="Contributor"/>
-  <img src="https://img.shields.io/badge/⚙️-CICD-7DCFFF?style=for-the-badge" alt="CI/CD"/>
-  <img src="https://img.shields.io/badge/🔥-Active-9ECE6A?style=for-the-badge" alt="Active"/>
-  <img src="https://img.shields.io/badge/📦-Open%20Source-BB9AF7?style=for-the-badge" alt="Open Source"/>
+  <img src="https://img.shields.io/badge/Contributor-FF9E64?style=for-the-badge" alt="Contributor"/>
+  <img src="https://img.shields.io/badge/CICD-7DCFFF?style=for-the-badge" alt="CI/CD"/>
+  <img src="https://img.shields.io/badge/Active-9ECE6A?style=for-the-badge" alt="Active"/>
+  <img src="https://img.shields.io/badge/Open%20Source-BB9AF7?style=for-the-badge" alt="Open Source"/>
 </p>
 
 ---
@@ -55,7 +55,7 @@ name: BandiAkarsh
 
 ---
 
-## 💼 Featured Projects
+## Featured Projects
 
 <p align="center">
   <a href="https://github.com/BandiAkarsh/Phishing-Guard">
@@ -77,35 +77,34 @@ name: BandiAkarsh
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |----------|--------------|
-| 🔐 **Security** | Python, TensorFlow, FastAPI, Docker |
-| 🤖 **AI/ML** | PyTorch, MLflow, Jupyter, Scikit-learn |
-| 🌐 **Web Dev** | TypeScript, Svelte, React, Node.js |
-| ☁️ **DevOps** | Docker, Kubernetes, CI/CD, Cloudflare |
-| 📊 **Data** | Pandas, NumPy, SQL |
+| Security | Python, TensorFlow, FastAPI, Docker |
+| AI/ML | PyTorch, MLflow, Jupyter, Scikit-learn |
+| Web Dev | TypeScript, Svelte, React, Node.js |
+| DevOps | Docker, Kubernetes, CI/CD, Cloudflare |
+| Data | Pandas, NumPy, SQL |
 
 ---
 
-## 📫 Connect
+## Connect
 
 <p align="center">
   <a href="mailto:akarshbandi82@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
   </a>
   <a href="https://linkedin.com/in/bandi-akarsh-b9339330a/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&log�linkedin&logoColor=white" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="https://github.com/BandiAkarsh">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
 </p>
 
----
 <!---
-📌 All cards are auto-generated via GitHub Actions
+All cards are auto-generated via GitHub Actions
 Card updates: Every 6 hours
-Generated with ❤️ by GitHub Actions
---=
+Generated with love by GitHub Actions
+-->
