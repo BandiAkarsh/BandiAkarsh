@@ -61,17 +61,17 @@ name: BandiAkarsh
   <a href="https://github.com/BandiAkarsh/Multimodal_LLM-Phishing-Detection">
     <img src="profile/pins/phishing-detection.svg" alt="Phishing Detection" width="49%"/>
   </a>
-  <a href="https://github.com/BandiAkarsh/opencode-antigravity-auth">
-    <img src="profile/pins/opencode-antigravity.svg" alt="OpenCode Antigravity" width="49%"/>
+  <a href="https://github.com/BandiAkarsh/wayland-native-fm">
+    <img src="profile/pins/wayland-native.svg" alt="wayland-native-fm" width="49%"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/BandiAkarsh/Terrafork">
-    <img src="profile/pins/terrafork.svg" alt="TerraFork" width="49%"/>
+  <a href="https://github.com/BandiAkarsh/paper2project">
+    <img src="profile/pins/paper2project.svg" alt="paper2prject-website" width="49%"/>
   </a>
-  <a href="https://github.com/BandiAkarsh/shannon">
-    <img src="profile/pins/shannon.svg" alt="Shannon" width="49%"/>
+  <a href="https://github.com/BandiAkarsh/ems">
+    <img src="profile/pins/ems" alt="ems" width="49%"/>
   </a>
 </p>
 
