@@ -7,33 +7,33 @@
 <text x="20" y="55" font-family="Arial,sans-serif" font-size="11" fill="#888">by bytes (GitHub Linguist)</text>
 <text x="20" y="97" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">C++</text>
 <rect x="120" y="80" width="380.0" height="24" fill="#FF6B6B" rx="4"/>
-<text x="508.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">21.7M (85.3%)</text>
+<text x="508.0" y="97" font-family="Arial,sans-serif" font-size="11" fill="#888">21.7M (82.9%)</text>
 <text x="20" y="127" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Python</text>
-<rect x="120" y="110" width="18.763504055295215" height="24" fill="#4ECDC4" rx="4"/>
-<text x="146.76350405529521" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">1.1M (4.2%)</text>
+<rect x="120" y="110" width="19.483962478406365" height="24" fill="#4ECDC4" rx="4"/>
+<text x="147.48396247840637" y="127" font-family="Arial,sans-serif" font-size="11" fill="#888">1.1M (4.2%)</text>
 <text x="20" y="157" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TypeScript</text>
 <rect x="120" y="140" width="16.590764479879237" height="24" fill="#45B7D1" rx="4"/>
-<text x="144.59076447987923" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">946.0K (3.7%)</text>
-<text x="20" y="187" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TeX</text>
-<rect x="120" y="170" width="7.493041185502406" height="24" fill="#96CEB4" rx="4"/>
-<text x="135.49304118550242" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">427.3K (1.7%)</text>
-<text x="20" y="217" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">C</text>
-<rect x="120" y="200" width="7.439060731610433" height="24" fill="#FFEAA7" rx="4"/>
-<text x="135.43906073161043" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">424.2K (1.7%)</text>
-<text x="20" y="247" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Svelte</text>
-<rect x="120" y="230" width="5.283893740599837" height="24" fill="#DDA0DD" rx="4"/>
-<text x="133.28389374059984" y="247" font-family="Arial,sans-serif" font-size="11" fill="#888">301.3K (1.2%)</text>
-<text x="20" y="277" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Rust</text>
-<rect x="120" y="260" width="3.0776049097272855" height="24" fill="#98D8C8" rx="4"/>
-<text x="131.07760490972728" y="277" font-family="Arial,sans-serif" font-size="11" fill="#888">175.5K (0.7%)</text>
-<text x="20" y="307" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Shell</text>
-<rect x="120" y="290" width="2.9072806185645703" height="24" fill="#F7DC6F" rx="4"/>
-<text x="130.90728061856458" y="307" font-family="Arial,sans-serif" font-size="11" fill="#888">165.8K (0.7%)</text>
-<text x="20" y="337" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">CMake</text>
-<rect x="120" y="320" width="2.3308928350643856" height="24" fill="#BB8FCE" rx="4"/>
-<text x="130.3308928350644" y="337" font-family="Arial,sans-serif" font-size="11" fill="#888">132.9K (0.5%)</text>
-<text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">C#</text>
-<rect x="120" y="350" width="1.7105209780225932" height="24" fill="#85C1E9" rx="4"/>
-<text x="129.7105209780226" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">97.5K (0.4%)</text>
-<text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 25,408,201 bytes</text>
+<text x="144.59076447987923" y="157" font-family="Arial,sans-serif" font-size="11" fill="#888">946.0K (3.6%)</text>
+<text x="20" y="187" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Shell</text>
+<rect x="120" y="170" width="9.462538564637006" height="24" fill="#96CEB4" rx="4"/>
+<text x="137.46253856463701" y="187" font-family="Arial,sans-serif" font-size="11" fill="#888">539.6K (2.1%)</text>
+<text x="20" y="217" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">TeX</text>
+<rect x="120" y="200" width="7.493041185502406" height="24" fill="#FFEAA7" rx="4"/>
+<text x="135.49304118550242" y="217" font-family="Arial,sans-serif" font-size="11" fill="#888">427.3K (1.6%)</text>
+<text x="20" y="247" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">C</text>
+<rect x="120" y="230" width="7.439060731610433" height="24" fill="#DDA0DD" rx="4"/>
+<text x="135.43906073161043" y="247" font-family="Arial,sans-serif" font-size="11" fill="#888">424.2K (1.6%)</text>
+<text x="20" y="277" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">CSS</text>
+<rect x="120" y="260" width="6.2338830865628845" height="24" fill="#98D8C8" rx="4"/>
+<text x="134.23388308656288" y="277" font-family="Arial,sans-serif" font-size="11" fill="#888">355.5K (1.4%)</text>
+<text x="20" y="307" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Svelte</text>
+<rect x="120" y="290" width="5.283893740599837" height="24" fill="#F7DC6F" rx="4"/>
+<text x="133.28389374059984" y="307" font-family="Arial,sans-serif" font-size="11" fill="#888">301.3K (1.2%)</text>
+<text x="20" y="337" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">JavaScript</text>
+<rect x="120" y="320" width="3.3937185164208548" height="24" fill="#BB8FCE" rx="4"/>
+<text x="131.39371851642085" y="337" font-family="Arial,sans-serif" font-size="11" fill="#888">193.5K (0.7%)</text>
+<text x="20" y="367" font-family="Arial,sans-serif" font-size="12" fill="#e0e0e0">Rust</text>
+<rect x="120" y="350" width="3.0776049097272855" height="24" fill="#85C1E9" rx="4"/>
+<text x="131.07760490972728" y="367" font-family="Arial,sans-serif" font-size="11" fill="#888">175.5K (0.7%)</text>
+<text x="20" y="400" font-family="Arial,sans-serif" font-size="10" fill="#666">Total: 26,141,595 bytes</text>
 </svg>
